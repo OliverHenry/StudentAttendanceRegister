@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace StudentAttendanceRegister
 {
-    public partial class SystemMenu : Form
+    public partial class TutorMenu : Form
     {
-        public SystemMenu()
+        public TutorMenu()
         {
             InitializeComponent();
+        }
+
+        private void TutorMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(1);
         }
     }
 }

@@ -94,6 +94,7 @@
             this.Controls.Add(this.loginID_text_box);
             this.Name = "LoginForm";
             this.Text = "SAR Login";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LoginForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

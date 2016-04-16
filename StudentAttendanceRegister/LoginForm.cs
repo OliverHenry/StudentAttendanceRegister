@@ -75,12 +75,48 @@ namespace StudentAttendanceRegister
                         reader.Read();
                         if (String.Format("{0}", reader[0]) == "1")
                         {
-                            this.Hide();
-                            SystemMenu sm = new SystemMenu();
-                            sm.Show();
+                            Console.WriteLine("Logged in");
+                            string userTypeSQL = "SELECT ut.name FROM users u JOIN user_types ut ON u.user_type_id = ut.id WHERE login_id = @login_id;";
+                            SqlCommand userTypeCommand = new SqlCommand(userTypeSQL, connection);
+                            userTypeCommand.Parameters.AddWithValue("@login_id", loginID_text_box.Text);
+                            SqlDataReader userTypeReader = userTypeCommand.ExecuteReader();
+                            try
+                            {
+                                userTypeReader.Read();
+                                if (String.Format("{0}", userTypeReader[0]) == "Course Coordinator")
+                                {
+                                    this.Hide();
+                                    CoordinatorMenu cm = new CoordinatorMenu();
+                                    cm.Show();
+                                }
+                                else if (String.Format("{0}", userTypeReader[0]) == "Tutor")
+                                {
+                                    this.Hide();
+                                    TutorMenu tm = new TutorMenu();
+                                    tm.Show();
+                                }
+                                else if (String.Format("{0}", userTypeReader[0]) == "Student")
+                                {
+                                    this.Hide();
+                                    StudentMenu sm = new StudentMenu();
+                                    sm.Show();
+                                }else
+                                {
+                                    MessageBox.Show("User type not yet supported");
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine(ex.Message);
+                            }
+                            finally
+                            {
+                                userTypeReader.Close();
+                            }
                         }
                         else
                         {
+                            Console.WriteLine("Log in failed");
                             MessageBox.Show("Invalid Username or Password");
                         }
                     }
@@ -95,6 +131,11 @@ namespace StudentAttendanceRegister
                 }
                 Console.ReadLine();
             }
+        }
+
+        private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Environment.Exit(1);
         }
     }
 }
