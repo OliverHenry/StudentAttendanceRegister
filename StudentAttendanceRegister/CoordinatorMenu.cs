@@ -28,5 +28,11 @@ namespace StudentAttendanceRegister
             cu.Show();
         }
 
+        private void assignCoursesButton_Click(object sender, EventArgs e)
+        {
+            UserCourses uc = new UserCourses();
+            uc.Show();
+        }
+
     }
 }
