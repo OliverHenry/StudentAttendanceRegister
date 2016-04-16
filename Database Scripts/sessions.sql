@@ -8,5 +8,6 @@
 	CONSTRAINT [session_session_type_fk]  FOREIGN KEY ([session_type_id]) REFERENCES [session_types] ([id]),
 	CONSTRAINT [session_room_fk]  FOREIGN KEY ([room_id]) REFERENCES [rooms] ([id]),
 	CONSTRAINT [session_user_fk]  FOREIGN KEY ([user_id]) REFERENCES [users] ([id]),
-	CONSTRAINT [session_course_fk]  FOREIGN KEY ([course_id]) REFERENCES [courses] ([id])
+	CONSTRAINT [session_course_fk]  FOREIGN KEY ([course_id]) REFERENCES [courses] ([id]),
+	CONSTRAINT [sesh_comp_uk] UNIQUE (session_type_id, room_id, user_id, course_id)
 )
