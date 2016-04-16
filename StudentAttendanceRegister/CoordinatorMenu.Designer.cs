@@ -28,13 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.createStudentButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // createStudentButton
+            // 
+            this.createStudentButton.Location = new System.Drawing.Point(84, 75);
+            this.createStudentButton.Name = "createStudentButton";
+            this.createStudentButton.Size = new System.Drawing.Size(120, 50);
+            this.createStudentButton.TabIndex = 0;
+            this.createStudentButton.Text = "Create Student";
+            this.createStudentButton.UseVisualStyleBackColor = true;
+            this.createStudentButton.Click += new System.EventHandler(this.createStudentButton_Click);
             // 
             // CoordinatorMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(304, 441);
+            this.Controls.Add(this.createStudentButton);
             this.MaximizeBox = false;
             this.Name = "CoordinatorMenu";
             this.Text = "Coordinator Menu";
@@ -44,5 +56,7 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button createStudentButton;
     }
 }

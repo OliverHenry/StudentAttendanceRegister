@@ -22,5 +22,11 @@ namespace StudentAttendanceRegister
             Environment.Exit(1);
         }
 
+        private void createStudentButton_Click(object sender, EventArgs e)
+        {
+            CreateUser cu = new CreateUser();
+            cu.Show();
+        }
+
     }
 }
