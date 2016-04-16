@@ -78,6 +78,12 @@
     <Compile Include="TutorMenu.Designer.cs">
       <DependentUpon>TutorMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserCourses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserCourses.Designer.cs">
+      <DependentUpon>UserCourses.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CoordinatorMenu.resx">
       <DependentUpon>CoordinatorMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TutorMenu.resx">
       <DependentUpon>TutorMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCourses.resx">
+      <DependentUpon>UserCourses.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
