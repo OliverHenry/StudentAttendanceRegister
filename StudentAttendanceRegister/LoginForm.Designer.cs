@@ -38,25 +38,26 @@
             // loginID_text_box
             // 
             this.loginID_text_box.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.loginID_text_box.Location = new System.Drawing.Point(64, 133);
+            this.loginID_text_box.Location = new System.Drawing.Point(12, 133);
             this.loginID_text_box.Name = "loginID_text_box";
-            this.loginID_text_box.Size = new System.Drawing.Size(162, 26);
+            this.loginID_text_box.Size = new System.Drawing.Size(280, 26);
             this.loginID_text_box.TabIndex = 0;
             // 
             // pw_textBox
             // 
             this.pw_textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pw_textBox.Location = new System.Drawing.Point(64, 208);
+            this.pw_textBox.Location = new System.Drawing.Point(12, 208);
             this.pw_textBox.Name = "pw_textBox";
             this.pw_textBox.PasswordChar = '*';
-            this.pw_textBox.Size = new System.Drawing.Size(162, 26);
+            this.pw_textBox.Size = new System.Drawing.Size(280, 26);
             this.pw_textBox.TabIndex = 1;
             // 
             // Login_Button
             // 
-            this.Login_Button.Location = new System.Drawing.Point(90, 260);
+            this.Login_Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login_Button.Location = new System.Drawing.Point(12, 278);
             this.Login_Button.Name = "Login_Button";
-            this.Login_Button.Size = new System.Drawing.Size(114, 35);
+            this.Login_Button.Size = new System.Drawing.Size(280, 54);
             this.Login_Button.TabIndex = 2;
             this.Login_Button.Text = "Login";
             this.Login_Button.UseVisualStyleBackColor = true;
@@ -65,20 +66,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(101, 110);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 108);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.Size = new System.Drawing.Size(97, 24);
             this.label1.TabIndex = 4;
             this.label1.Text = "Username";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(106, 185);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 183);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.Size = new System.Drawing.Size(92, 24);
             this.label2.TabIndex = 5;
             this.label2.Text = "Password";
             // 

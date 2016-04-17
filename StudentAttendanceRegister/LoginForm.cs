@@ -16,6 +16,7 @@ namespace StudentAttendanceRegister
     {
         SARUtilities dbUtils = new SARUtilities();
 
+
         public LoginForm()
         {
             InitializeComponent();
@@ -26,13 +27,18 @@ namespace StudentAttendanceRegister
             this.Close();
         }
 
+
         private void Login_Button_Click(object sender, EventArgs e)
         {
 
+
+
             string connectionString = ConfigurationManager.AppSettings["DBConnection"];
+
 
             // Provide the query string with a parameter placeholder.
             string queryString = "SELECT COUNT(1) FROM users WHERE login_id = @login_id AND password_hash = @password_hash;";
+
 
             // Create and open the connection in a using block. This
             // ensures that all resources will be closed and disposed
@@ -53,6 +59,7 @@ namespace StudentAttendanceRegister
                 {
                     connection.Open();
                     SqlDataReader reader = command.ExecuteReader();
+
                     try
                     {
                         reader.Read();
@@ -63,14 +70,17 @@ namespace StudentAttendanceRegister
                             SqlCommand userTypeCommand = new SqlCommand(userTypeSQL, connection);
                             userTypeCommand.Parameters.AddWithValue("@login_id", loginID_text_box.Text);
                             SqlDataReader userTypeReader = userTypeCommand.ExecuteReader();
+
                             try
                             {
                                 userTypeReader.Read();
                                 if (String.Format("{0}", userTypeReader[0]) == "Course Coordinator")
                                 {
+
                                     this.Hide();
                                     CoordinatorMenu cm = new CoordinatorMenu();
                                     cm.Show();
+
                                 }
                                 else if (String.Format("{0}", userTypeReader[0]) == "Tutor")
                                 {
@@ -80,8 +90,9 @@ namespace StudentAttendanceRegister
                                 }
                                 else if (String.Format("{0}", userTypeReader[0]) == "Student")
                                 {
+                                    userLogin = loginID_text_box.Text;
                                     this.Hide();
-                                    StudentMenu sm = new StudentMenu();
+                                    StudentMenu sm = new StudentMenu(this);
                                     sm.Show();
                                 }else
                                 {
@@ -91,9 +102,11 @@ namespace StudentAttendanceRegister
                             catch (Exception ex)
                             {
                                 Console.WriteLine(ex.Message);
+
                             }
                             finally
                             {
+                                
                                 userTypeReader.Close();
                             }
                         }
@@ -114,11 +127,23 @@ namespace StudentAttendanceRegister
                 }
                 Console.ReadLine();
             }
+        
+
+
+        }
+
+        public string userLogin
+        {
+            get { return loginID_text_box.Text; }
+            set { loginID_text_box.Text = value; }
+
         }
 
         private void LoginForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(1);
         }
+
+
     }
 }

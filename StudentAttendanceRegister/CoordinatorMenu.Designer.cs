@@ -36,9 +36,9 @@
             // 
             // createStudentButton
             // 
-            this.createStudentButton.Location = new System.Drawing.Point(84, 75);
+            this.createStudentButton.Location = new System.Drawing.Point(12, 75);
             this.createStudentButton.Name = "createStudentButton";
-            this.createStudentButton.Size = new System.Drawing.Size(120, 50);
+            this.createStudentButton.Size = new System.Drawing.Size(280, 50);
             this.createStudentButton.TabIndex = 0;
             this.createStudentButton.Text = "Create Student";
             this.createStudentButton.UseVisualStyleBackColor = true;
@@ -46,9 +46,9 @@
             // 
             // assignCoursesButton
             // 
-            this.assignCoursesButton.Location = new System.Drawing.Point(84, 147);
+            this.assignCoursesButton.Location = new System.Drawing.Point(12, 131);
             this.assignCoursesButton.Name = "assignCoursesButton";
-            this.assignCoursesButton.Size = new System.Drawing.Size(120, 50);
+            this.assignCoursesButton.Size = new System.Drawing.Size(280, 50);
             this.assignCoursesButton.TabIndex = 1;
             this.assignCoursesButton.Text = "Assign Course";
             this.assignCoursesButton.UseVisualStyleBackColor = true;
@@ -56,9 +56,9 @@
             // 
             // addAttendanceButton
             // 
-            this.addAttendanceButton.Location = new System.Drawing.Point(84, 219);
+            this.addAttendanceButton.Location = new System.Drawing.Point(12, 187);
             this.addAttendanceButton.Name = "addAttendanceButton";
-            this.addAttendanceButton.Size = new System.Drawing.Size(120, 50);
+            this.addAttendanceButton.Size = new System.Drawing.Size(280, 50);
             this.addAttendanceButton.TabIndex = 2;
             this.addAttendanceButton.Text = "Attendance Register";
             this.addAttendanceButton.UseVisualStyleBackColor = true;
@@ -66,9 +66,9 @@
             // 
             // viewAttendanceButton
             // 
-            this.viewAttendanceButton.Location = new System.Drawing.Point(84, 290);
+            this.viewAttendanceButton.Location = new System.Drawing.Point(12, 243);
             this.viewAttendanceButton.Name = "viewAttendanceButton";
-            this.viewAttendanceButton.Size = new System.Drawing.Size(120, 50);
+            this.viewAttendanceButton.Size = new System.Drawing.Size(280, 50);
             this.viewAttendanceButton.TabIndex = 3;
             this.viewAttendanceButton.Text = "View Attendance";
             this.viewAttendanceButton.UseVisualStyleBackColor = true;

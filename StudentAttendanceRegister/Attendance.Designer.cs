@@ -42,33 +42,39 @@
             // 
             // courseCodeComboBox
             // 
+            this.courseCodeComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.courseCodeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courseCodeComboBox.FormattingEnabled = true;
-            this.courseCodeComboBox.Location = new System.Drawing.Point(65, 43);
+            this.courseCodeComboBox.Location = new System.Drawing.Point(13, 52);
             this.courseCodeComboBox.Name = "courseCodeComboBox";
-            this.courseCodeComboBox.Size = new System.Drawing.Size(121, 21);
+            this.courseCodeComboBox.Size = new System.Drawing.Size(279, 28);
             this.courseCodeComboBox.TabIndex = 0;
             this.courseCodeComboBox.SelectedIndexChanged += new System.EventHandler(this.courseCodeComboBox_SelectedIndexChanged);
             // 
             // sessionComboBox
             // 
+            this.sessionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sessionComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sessionComboBox.FormattingEnabled = true;
-            this.sessionComboBox.Location = new System.Drawing.Point(65, 101);
+            this.sessionComboBox.Location = new System.Drawing.Point(13, 103);
             this.sessionComboBox.Name = "sessionComboBox";
-            this.sessionComboBox.Size = new System.Drawing.Size(121, 21);
+            this.sessionComboBox.Size = new System.Drawing.Size(279, 28);
             this.sessionComboBox.TabIndex = 1;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(65, 156);
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(13, 155);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(279, 20);
             this.dateTimePicker1.TabIndex = 2;
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(190, 336);
+            this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveButton.Location = new System.Drawing.Point(176, 382);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(75, 23);
+            this.saveButton.Size = new System.Drawing.Size(116, 47);
             this.saveButton.TabIndex = 3;
             this.saveButton.Text = "Add";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -78,9 +84,9 @@
             // 
             this.groupBox1.Controls.Add(this.studentIDRadioBtn);
             this.groupBox1.Controls.Add(this.listRadioBtn);
-            this.groupBox1.Location = new System.Drawing.Point(13, 242);
+            this.groupBox1.Location = new System.Drawing.Point(13, 222);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(114, 68);
+            this.groupBox1.Size = new System.Drawing.Size(114, 88);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User Input";
@@ -112,17 +118,20 @@
             // 
             // studentComboBox
             // 
+            this.studentComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.studentComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentComboBox.FormattingEnabled = true;
-            this.studentComboBox.Location = new System.Drawing.Point(133, 271);
+            this.studentComboBox.Location = new System.Drawing.Point(133, 250);
             this.studentComboBox.Name = "studentComboBox";
-            this.studentComboBox.Size = new System.Drawing.Size(121, 21);
+            this.studentComboBox.Size = new System.Drawing.Size(159, 28);
             this.studentComboBox.TabIndex = 5;
             // 
             // studentIDTextBox
             // 
-            this.studentIDTextBox.Location = new System.Drawing.Point(133, 271);
+            this.studentIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentIDTextBox.Location = new System.Drawing.Point(133, 251);
             this.studentIDTextBox.Name = "studentIDTextBox";
-            this.studentIDTextBox.Size = new System.Drawing.Size(121, 20);
+            this.studentIDTextBox.Size = new System.Drawing.Size(159, 26);
             this.studentIDTextBox.TabIndex = 6;
             this.studentIDTextBox.Visible = false;
             // 

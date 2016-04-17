@@ -38,6 +38,7 @@
             // 
             // studentComboBox
             // 
+            this.studentComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.studentComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentComboBox.FormattingEnabled = true;
             this.studentComboBox.Location = new System.Drawing.Point(82, 81);
@@ -48,10 +49,10 @@
             // 
             // addToCourseButton
             // 
-            this.addToCourseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addToCourseButton.Location = new System.Drawing.Point(186, 229);
+            this.addToCourseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addToCourseButton.Location = new System.Drawing.Point(12, 229);
             this.addToCourseButton.Name = "addToCourseButton";
-            this.addToCourseButton.Size = new System.Drawing.Size(106, 41);
+            this.addToCourseButton.Size = new System.Drawing.Size(280, 55);
             this.addToCourseButton.TabIndex = 3;
             this.addToCourseButton.Text = "Add to Course";
             this.addToCourseButton.UseVisualStyleBackColor = true;
@@ -59,6 +60,7 @@
             // 
             // coursesComboBox
             // 
+            this.coursesComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.coursesComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.coursesComboBox.FormattingEnabled = true;
             this.coursesComboBox.Location = new System.Drawing.Point(82, 129);
@@ -72,9 +74,9 @@
             this.tempCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tempCheckBox.Location = new System.Drawing.Point(102, 174);
             this.tempCheckBox.Name = "tempCheckBox";
-            this.tempCheckBox.Size = new System.Drawing.Size(65, 22);
+            this.tempCheckBox.Size = new System.Drawing.Size(99, 22);
             this.tempCheckBox.TabIndex = 6;
-            this.tempCheckBox.Text = "Temp";
+            this.tempCheckBox.Text = "Temporary";
             this.tempCheckBox.UseVisualStyleBackColor = true;
             // 
             // label1

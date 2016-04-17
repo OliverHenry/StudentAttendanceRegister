@@ -21,5 +21,17 @@ namespace StudentAttendanceRegister
         {
             Environment.Exit(1);
         }
+
+        private void addAttendanceButton_Click(object sender, EventArgs e)
+        {
+            Attendance at = new Attendance();
+            at.Show();
+        }
+
+        private void viewAttendanceButton_Click(object sender, EventArgs e)
+        {
+            AttendanceView av = new AttendanceView();
+            av.Show();
+        }
     }
 }
