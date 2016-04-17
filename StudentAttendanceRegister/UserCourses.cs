@@ -21,42 +21,38 @@ namespace StudentAttendanceRegister
 
         private void UserCourses_Load(object sender, EventArgs e)
         {
-            string connectionString = ConfigurationManager.AppSettings["DBConnection"];
-
-            // Provide the query string with a parameter placeholder.
-            string queryString = "SELECT first_name FROM users;";
-
-            // Create and open the connection in a using block. This
-            // ensures that all resources will be closed and disposed
-            // when the code exits.
-            using (SqlConnection connection =
-                new SqlConnection(connectionString))
+         
+            using (SqlConnection connection = new SqlConnection(ConfigurationManager.AppSettings["DBConnection"]))
             {
-
-                // Create the Command and Parameter objects.
-                SqlCommand command = new SqlCommand(queryString, connection);
-
-
-                connection.Open();
-                SqlDataReader reader = command.ExecuteReader();
-                reader.Read();
-                string userTypeSQL = "SELECT u.id, u.first_name, u.last_name FROM users u JOIN user_types ut ON u.user_type_id = ut.id AND ut.name = 'Student';";
-                SqlCommand userTypeCommand = new SqlCommand(userTypeSQL, connection);
-                SqlDataReader userTypeReader = userTypeCommand.ExecuteReader();
-
                 try
                 {
-                   while (userTypeReader.Read())
-                    {
-                        studentComboBox.Items.Add(String.Format("({0}) {1} {2}", userTypeReader[0], userTypeReader[1], userTypeReader[2]));
-                    }
+                    connection.Open();
+                    string userTypeSQL = "SELECT u.id, u.first_name, u.last_name FROM users u JOIN user_types ut ON u.user_type_id = ut.id AND ut.name = 'Student';";
+                    SqlCommand userTypeCommand = new SqlCommand(userTypeSQL, connection);
+                    SqlDataReader userTypeReader = userTypeCommand.ExecuteReader();
 
+                    try
+                    {
+                        while (userTypeReader.Read())
+                        {
+                            studentComboBox.Items.Add(String.Format("({0}) {1} {2}", userTypeReader[0], userTypeReader[1], userTypeReader[2]));
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
+                    MessageBox.Show(ex.Message);
                 }
-
             }
         }
 

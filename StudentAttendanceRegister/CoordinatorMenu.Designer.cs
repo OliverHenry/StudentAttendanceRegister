@@ -30,6 +30,7 @@
         {
             this.createStudentButton = new System.Windows.Forms.Button();
             this.assignCoursesButton = new System.Windows.Forms.Button();
+            this.addAttendanceButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // createStudentButton
@@ -52,11 +53,22 @@
             this.assignCoursesButton.UseVisualStyleBackColor = true;
             this.assignCoursesButton.Click += new System.EventHandler(this.assignCoursesButton_Click);
             // 
+            // addAttendanceButton
+            // 
+            this.addAttendanceButton.Location = new System.Drawing.Point(84, 219);
+            this.addAttendanceButton.Name = "addAttendanceButton";
+            this.addAttendanceButton.Size = new System.Drawing.Size(120, 50);
+            this.addAttendanceButton.TabIndex = 2;
+            this.addAttendanceButton.Text = "Attendance Register";
+            this.addAttendanceButton.UseVisualStyleBackColor = true;
+            this.addAttendanceButton.Click += new System.EventHandler(this.addAttendanceButton_Click);
+            // 
             // CoordinatorMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 441);
+            this.Controls.Add(this.addAttendanceButton);
             this.Controls.Add(this.assignCoursesButton);
             this.Controls.Add(this.createStudentButton);
             this.MaximizeBox = false;
@@ -71,5 +83,6 @@
 
         private System.Windows.Forms.Button createStudentButton;
         private System.Windows.Forms.Button assignCoursesButton;
+        private System.Windows.Forms.Button addAttendanceButton;
     }
 }

@@ -29,11 +29,9 @@ namespace StudentAttendanceRegister
             }
             else
             {
-                string connectionString = ConfigurationManager.AppSettings["DBConnection"];
-                string userInsertSQL = "INSERT INTO USERS (ID, LOGIN_ID, FIRST_NAME, LAST_NAME, DATE_OF_BIRTH, USER_TYPE_ID, PASSWORD_HASH) VALUES(@user_id, @login_id, @first_name, @last_name, @dob, (SELECT ID FROM USER_TYPES WHERE NAME = @user_type), @password_hash);";
-                using (SqlConnection connection = new SqlConnection(connectionString))
+                using (SqlConnection connection = new SqlConnection(ConfigurationManager.AppSettings["DBConnection"]))
                 {
-                    SqlCommand insCommand = new SqlCommand(userInsertSQL, connection);
+                    SqlCommand insCommand = new SqlCommand("INSERT INTO USERS (ID, LOGIN_ID, FIRST_NAME, LAST_NAME, DATE_OF_BIRTH, USER_TYPE_ID, PASSWORD_HASH) VALUES(@user_id, @login_id, @first_name, @last_name, @dob, (SELECT ID FROM USER_TYPES WHERE NAME = @user_type), @password_hash);", connection);
                     insCommand.Parameters.AddWithValue("@user_id", numValue);
                     insCommand.Parameters.AddWithValue("@login_id", loginIdTextBox.Text);
                     insCommand.Parameters.AddWithValue("@first_name", firstNameTextBox.Text);

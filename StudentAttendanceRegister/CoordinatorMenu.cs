@@ -34,5 +34,11 @@ namespace StudentAttendanceRegister
             uc.Show();
         }
 
+        private void addAttendanceButton_Click(object sender, EventArgs e)
+        {
+            Attendance at = new Attendance();
+            at.Show();
+        }
+
     }
 }
