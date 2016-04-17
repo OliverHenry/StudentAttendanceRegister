@@ -15,7 +15,7 @@ namespace StudentAttendanceRegister
     public partial class Attendance : Form
     {
         
-        DatabaseUtilities dbUtils = new DatabaseUtilities();
+        SARUtilities dbUtils = new SARUtilities();
 
         public Attendance()
         {

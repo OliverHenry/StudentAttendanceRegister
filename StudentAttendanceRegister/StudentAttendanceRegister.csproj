@@ -52,13 +52,19 @@
     <Compile Include="Attendance.Designer.cs">
       <DependentUpon>Attendance.cs</DependentUpon>
     </Compile>
+    <Compile Include="AttendanceView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AttendanceView.Designer.cs">
+      <DependentUpon>AttendanceView.cs</DependentUpon>
+    </Compile>
     <Compile Include="CreateUser.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CreateUser.Designer.cs">
       <DependentUpon>CreateUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseUtilities.cs" />
+    <Compile Include="SARUtilities.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     </Compile>
     <EmbeddedResource Include="Attendance.resx">
       <DependentUpon>Attendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AttendanceView.resx">
+      <DependentUpon>AttendanceView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CoordinatorMenu.resx">
       <DependentUpon>CoordinatorMenu.cs</DependentUpon>

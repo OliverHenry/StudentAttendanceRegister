@@ -9,12 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Configuration;
-using System.Security.Cryptography;
 
 namespace StudentAttendanceRegister
 {
     public partial class LoginForm : Form
     {
+        SARUtilities dbUtils = new SARUtilities();
+
         public LoginForm()
         {
             InitializeComponent();
@@ -23,24 +24,6 @@ namespace StudentAttendanceRegister
         private void Exit_Button_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        public string CalculateMD5Hash(string input)
-        {
-
-            // step 1, calculate MD5 hash from input
-            MD5 md5 = System.Security.Cryptography.MD5.Create();
-            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
-            byte[] hash = md5.ComputeHash(inputBytes);
-
-            // step 2, convert byte array to hex string
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < hash.Length; i++)
-            {
-                sb.Append(hash[i].ToString("X2"));
-            }
-
-            return sb.ToString();
         }
 
         private void Login_Button_Click(object sender, EventArgs e)
@@ -61,7 +44,7 @@ namespace StudentAttendanceRegister
                 // Create the Command and Parameter objects.
                 SqlCommand command = new SqlCommand(queryString, connection);
                 command.Parameters.AddWithValue("@login_id", loginID_text_box.Text);
-                command.Parameters.AddWithValue("@password_hash", CalculateMD5Hash(pw_textBox.Text));
+                command.Parameters.AddWithValue("@password_hash", dbUtils.CalculateMD5Hash(pw_textBox.Text));
 
                 // Open the connection in a try/catch block. 
                 // Create and execute the DataReader, writing the result

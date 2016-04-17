@@ -14,6 +14,7 @@ namespace StudentAttendanceRegister
 {
     public partial class CreateUser : Form
     {
+        SARUtilities dbUtils = new SARUtilities();
         public CreateUser()
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace StudentAttendanceRegister
                     insCommand.Parameters.AddWithValue("@last_name", lastNameTextBox.Text);
                     insCommand.Parameters.AddWithValue("@dob", dobTimePicker.Value.ToString("dd-MMM-yyyy"));
                     insCommand.Parameters.AddWithValue("@user_type", userTypesComboBox.Text);
-                    insCommand.Parameters.AddWithValue("@password_hash", passwordTextBox.Text);
+                    insCommand.Parameters.AddWithValue("@password_hash", dbUtils.CalculateMD5Hash(passwordTextBox.Text));
 
                     try
                     {

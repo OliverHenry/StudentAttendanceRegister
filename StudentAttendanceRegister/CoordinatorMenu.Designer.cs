@@ -31,6 +31,7 @@
             this.createStudentButton = new System.Windows.Forms.Button();
             this.assignCoursesButton = new System.Windows.Forms.Button();
             this.addAttendanceButton = new System.Windows.Forms.Button();
+            this.viewAttendanceButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // createStudentButton
@@ -63,11 +64,22 @@
             this.addAttendanceButton.UseVisualStyleBackColor = true;
             this.addAttendanceButton.Click += new System.EventHandler(this.addAttendanceButton_Click);
             // 
+            // viewAttendanceButton
+            // 
+            this.viewAttendanceButton.Location = new System.Drawing.Point(84, 290);
+            this.viewAttendanceButton.Name = "viewAttendanceButton";
+            this.viewAttendanceButton.Size = new System.Drawing.Size(120, 50);
+            this.viewAttendanceButton.TabIndex = 3;
+            this.viewAttendanceButton.Text = "View Attendance";
+            this.viewAttendanceButton.UseVisualStyleBackColor = true;
+            this.viewAttendanceButton.Click += new System.EventHandler(this.viewAttendanceButton_Click);
+            // 
             // CoordinatorMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(304, 441);
+            this.Controls.Add(this.viewAttendanceButton);
             this.Controls.Add(this.addAttendanceButton);
             this.Controls.Add(this.assignCoursesButton);
             this.Controls.Add(this.createStudentButton);
@@ -84,5 +96,6 @@
         private System.Windows.Forms.Button createStudentButton;
         private System.Windows.Forms.Button assignCoursesButton;
         private System.Windows.Forms.Button addAttendanceButton;
+        private System.Windows.Forms.Button viewAttendanceButton;
     }
 }
